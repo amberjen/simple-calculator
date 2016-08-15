@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/normalize.css">
+    <link rel="stylesheet" href="vendors/simple-grid.min.css">
+    <link rel="stylesheet" href="resources/style.min.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center">Simple Calculator</h1>
+        <div class="app">
+            <div class="row">
+                <div class="col-3 first"><button class="js-btn clear">C</button></div>
+                <div class="col-9 right app-screen" id="js-output"></div>
+            </div>
+
+            <section class="app-keypad center">
+                <div class="row">
+                    <div class="col-3"><button class="js-btn">7</button></div>
+                    <div class="col-3"><button class="js-btn">8</button></div>
+                    <div class="col-3"><button class="js-btn">9</button></div>
+                    <div class="col-3"><button class="js-btn operator">÷</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="js-btn">4</button></div>
+                    <div class="col-3"><button class="js-btn">5</button></div>
+                    <div class="col-3"><button class="js-btn">6</button></div>
+                    <div class="col-3"><button class="js-btn operator">x</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="js-btn">1</button></div>
+                    <div class="col-3"><button class="js-btn">2</button></div>
+                    <div class="col-3"><button class="js-btn">3</button></div>
+                    <div class="col-3"><button class="js-btn operator">-</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="js-btn">0</button></div>
+                    <div class="col-3"><button class="js-btn">.</button></div>
+                    <div class="col-3"><button class="js-btn equal">=</button></div>
+                    <div class="col-3"><button class="js-btn operator">+</button></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="resources/script.js"></script>
+</body>
+</html>

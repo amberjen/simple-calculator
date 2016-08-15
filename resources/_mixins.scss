@@ -1,0 +1,21 @@
+@mixin btnStyle($bgColor, $shadowColor, $fontColor: #333447) {
+    background-color: $bgColor;
+    color: $fontColor;
+
+    box-shadow: 0 3px $shadowColor;
+
+    &:hover {
+        background-color: lighten($bgColor, 5);
+    }
+}
+
+@mixin btnStyle2($bgColor, $shadowColor, $fontColor: #333447) {
+    background-color: $bgColor;
+    color: $fontColor;
+
+    box-shadow: 0 3px $shadowColor;
+
+    &:hover {
+        background-color: darken($bgColor, 3);
+    }
+}

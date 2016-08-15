@@ -1,0 +1,109 @@
+@import "_variables";
+@import "_mixins";
+
+/* =================
+    Basic Setup
+ ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $font-color;
+}
+
+html,
+body {
+    font-family: $font, sans-serif;
+    font-weight: 500;
+}
+
+button {
+    width: 100%;
+    background-color: $btnBgColor;
+    color: $font-color;
+    border: 0;
+    border-radius: $borderRadius;
+    outline: none;
+    padding: 5px;
+
+    box-shadow: 0 3px #cc2b19;
+
+    transition-duration: .2s;
+
+    &:hover {
+        background-color: darken($btnBgColor, 4);
+    }
+}
+
+
+/* =================
+        Header
+ ================= */
+h1 {
+    font-family: 'Righteous', cursive;
+    color: #333447;
+}
+
+
+ /* =================
+     App - Calculator
+  ================= */
+
+.app {
+    margin: 0 auto;
+    width: 50%;
+    color: $font-color;
+    background: linear-gradient(#bdc3c7, #acb4b9);
+    box-shadow: 0 3px #919ba1, 0 10px 15px rgba(0,0,0,.2);
+    padding: 1rem;
+    border-radius: $borderRadius;
+
+    .row [class^="col"] {
+        margin: 0;
+    }
+
+    .col-3 {
+        border-radius: $borderRadius;
+        background-color: $btnBgColor;
+    }
+
+    .row {
+        .col-3 {
+            width: 20%;
+            margin-top: 3%;
+            margin-right: 5%;
+
+            button.clear {
+                padding: .44rem .9rem;
+            }
+        }
+
+        .col-9 {
+            width: 70%;
+            margin-top: 3%;
+        }
+    }
+
+    .app-screen {
+        background-color: #2c3e50;
+        height: 2.5rem;
+        border-radius: 4px;
+        color: aqua;
+        padding: .5rem .9rem;
+        overflow: hidden;
+        box-shadow: inset 0 5px rgba(0,0,0,.3);
+
+    }
+
+    .operator {
+        @include btnStyle(#ecf0f1, #d3dcde);
+    }
+
+    .equal {
+        @include btnStyle2(#f1c5c1, #e38c82);
+    }
+
+    .clear {
+        @include btnStyle2(#d9b00d, #c19c0b, $font-color);
+    }
+}
